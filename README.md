@@ -1,12 +1,12 @@
 This is a Dart implementation of the String Calculator Kata using Test-Driven Development (TDD).
 
 Features
-Returns 0 for an empty string
-Single number
-New line (\n) as a delimiter
-Multiple numbers separated by commas
-Custom delimiters (//;\n1;2 → delimiter is ;)
-Throws error for negative numbers and lists them in the message
+Returns 0 for an empty string\n
+Single number\n
+New line (\n) as a delimiter\n
+Multiple numbers separated by commas\n
+Custom delimiters (//;\n1;2 → delimiter is ;)\n
+Throws error for negative numbers and lists them in the message\n
 
 How to Run
 # Install dependencies
