@@ -1,3 +1,5 @@
 int add(String input) {
-  return 6 * 7;
+  var numbers = input.trim();
+  if (numbers.isEmpty) return 0;
+  return 0;
 }
