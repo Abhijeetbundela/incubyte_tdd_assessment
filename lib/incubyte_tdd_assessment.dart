@@ -3,7 +3,19 @@ int add(String input) {
   if (numbers.isEmpty) return 0;
   var sum = 0;
 
-  List<String> parts = numbers.split(RegExp(r'[,\n]'));
+  String delimiterPattern = r'[,\n]';
+  String numberPart = numbers;
+
+  if (numbers.startsWith("//")) {
+    List<String> lines = numbers.split("\n");
+    String delimiterLine = lines[0];
+    numberPart = lines.sublist(1).join("\n");
+
+    String customDelimiter = delimiterLine.substring(2);
+    delimiterPattern = RegExp.escape(customDelimiter);
+  }
+
+  List<String> parts = numberPart.split(RegExp(delimiterPattern));
 
   List<int> nums = [];
   for (String part in parts) {
