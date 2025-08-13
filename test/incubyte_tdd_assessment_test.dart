@@ -19,4 +19,8 @@ void main() {
   test('multiple numbers', () {
     expect(add('1,2,3,4'), equals(10));
   });
+
+  test('supports custom delimiter at start', () {
+    expect(add('//;\n1;2'), equals(3));
+  });
 }
