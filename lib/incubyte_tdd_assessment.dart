@@ -23,8 +23,19 @@ int add(String input) {
       nums.add(int.parse(part.trim()));
     }
   }
+  final negatives = nums.where((n) => n < 0).toList();
+  if (negatives.isNotEmpty) {
+    throw NegativeNumbersException(negatives);
+  }
   for (int num in nums) {
     sum += num;
   }
   return sum;
+}
+
+class NegativeNumbersException implements Exception {
+  final List<int> negatives;
+  NegativeNumbersException(this.negatives);
+  @override
+  String toString() => 'NegativeNumbersException: negative numbers not allowed ${negatives.join(',')}';
 }
