@@ -1,5 +1,3 @@
-
-
 import 'package:incubyte_tdd_assessment/incubyte_tdd_assessment.dart';
 import 'package:test/test.dart';
 
@@ -22,5 +20,18 @@ void main() {
 
   test('supports custom delimiter at start', () {
     expect(add('//;\n1;2'), equals(3));
+  });
+
+  test('throws when negatives present and lists all negatives', () {
+    expect(
+      () => add('1,-2,3,-4'),
+      throwsA(
+        predicate(
+          (e) =>
+              e.toString() ==
+              'NegativeNumbersException: negative numbers not allowed -2,-4',
+        ),
+      ),
+    );
   });
 }
