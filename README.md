@@ -7,9 +7,9 @@ Single number\
 New line (\n) as a delimiter\
 Multiple numbers separated by commas\
 Custom delimiters (//;\n1;2 → delimiter is ;)\
-Throws error for negative numbers and lists them in the message\
+Throws error for negative numbers and lists them in the message
 
-How to Run
+# How to Run
 # Install dependencies
 dart pub get
 
